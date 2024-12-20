@@ -1,21 +1,23 @@
 <?php 
 
-$favcolor = "red";
+//II am currently learning php
+$i = 0;
 
-switch($favcolor){
-    case "red":
-     echo "Your favorite color is red!";
-     break;
-    case "blue":
-     echo "Your favorite color is blue";
-     break;
-    case "green":
-     echo "Your favorite color is green";
-     break;
-    default:
-     echo "Your default color is unknown";
-};
+while($i < 6){
+    $i++;
+    if($i == 2) continue;
+     echo "Looping {$i} <br/>";
+}
+
+// The while loop will continue the execution as long as the value is true
+//continue statement will skipp the specified condition 
+//break statement will stop the loop
 
 
-// PHP LOOPS
-  
+
+
+
+
+
+
+?>
