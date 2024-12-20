@@ -17,6 +17,23 @@ foreach($colors as $x){
 }
 
 
+//learning how to works with functions in php 
+function first_function(){
+    echo "This is my first function was executed";
+}
 
+
+//custom functions 
+function name_setter($name){
+    echo "Hi my name is $name <br/>";
+}
+
+//calling a function with an arguments 
+name_setter("Jason");
+
+
+first_function();
+
+//a function can return a value
 
 ?>
