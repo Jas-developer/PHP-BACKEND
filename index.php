@@ -1,39 +1,39 @@
 <?php 
+// LEARNING OBJECT ORIENTED PROGGRAMMING IN PHP
 
-//php for loop
-for($x = 0; $x <= 10; $x++){
-    if($x == 3)continue;
-    echo "The number is: $x <br>";
+class Employee{
+    public string $name;
+    public int $age;
+    public string $role;
+    public int $years_exp;
+
+
+    function __construct($name,$age,$role,$years_exp)
+    {
+        $this -> name = $name;
+        $this -> age = $age;
+        $this -> role = $role;
+        $this -> years_exp = $years_exp;
+    }
+
+    function get_employee(){
+        return 
+        [
+            'name' => $this -> name,
+            'age' => $this -> age,
+            'role' => $this -> role,
+            'years_exp' => $this -> years_exp
+        ];
+    }
+
+    function __destruct()
+    {
+        echo "Memory is cleaned";
+    }
 }
 
-//php for each loop
-
-//this is an array 
-$colors = array("red","blue","yellow");
-
-//this is a for each loop in an array
-foreach($colors as $x){
-    echo "$x <br>";
-}
 
 
-//learning how to works with functions in php 
-function first_function(){
-    echo "This is my first function was executed";
-}
+$employee_1 = new Employee("Jhon Doe",23,"Call Center Agent",2);
 
-
-//custom functions 
-function name_setter($name){
-    echo "Hi my name is $name <br/>";
-}
-
-//calling a function with an arguments 
-name_setter("Jason");
-
-
-first_function();
-
-//a function can return a value
-
-?>
+echo $employee_1 -> name;
