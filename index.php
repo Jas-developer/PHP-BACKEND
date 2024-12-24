@@ -2,6 +2,8 @@
 // LEARNING OBJECT ORIENTED PROGGRAMMING IN PHP
 
 class Employee{
+
+    //access modifiers
     public string $name;
     public int $age;
     public string $role;
@@ -16,7 +18,7 @@ class Employee{
         $this -> years_exp = $years_exp;
     }
 
-    function get_employee(){
+    public function get_employee(){
         return 
         [
             'name' => $this -> name,
@@ -28,7 +30,7 @@ class Employee{
 
     function __destruct()
     {
-        echo "Memory is cleaned";
+        echo "<br/> Memory is cleaned for {$this->name}";
     }
 }
 
